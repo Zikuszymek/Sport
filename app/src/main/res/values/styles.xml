@@ -17,4 +17,38 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="ScoresHeader">
+        <item name="android:background">@color/dark_grey</item>
+        <item name="android:padding">@dimen/base_padding</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="MenuTextView">
+        <item name="android:textSize">@dimen/menu_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginLeft">@dimen/menu_item_margin</item>
+        <item name="android:layout_marginTop">@dimen/menu_item_margin</item>
+    </style>
+
+    <style name="WhiteBoldText">
+        <item name="android:paddingTop">@dimen/base_padding</item>
+        <item name="android:paddingBottom">@dimen/base_padding</item>
+        <item name="android:textSize">@dimen/bigger_text_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BuleText">
+        <item name="android:paddingTop">@dimen/base_padding</item>
+        <item name="android:paddingBottom">@dimen/base_padding</item>
+        <item name="android:textSize">@dimen/bigger_text_size</item>
+        <item name="android:textColor">@color/blue_text</item>
+    </style>
+
+    <style name="BuleBoldText" parent="@style/BuleText">
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>

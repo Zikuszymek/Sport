@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/dark_grey">
+
+    <TextView
+        style="@style/WhiteBoldText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="@string/club"
+        android:paddingLeft="@dimen/base_padding"
+        android:paddingStart="@dimen/base_padding"
+        />
+
+    <TextView
+        style="@style/WhiteBoldText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:text="@string/matches"
+        />
+
+    <TextView
+        style="@style/WhiteBoldText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:text="@string/wins"
+        />
+
+    <TextView
+        style="@style/WhiteBoldText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:text="@string/draw"
+        />
+
+    <TextView
+        style="@style/WhiteBoldText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:text="@string/lost"
+        />
+
+    <TextView
+        style="@style/WhiteBoldText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:text="@string/goals"
+        />
+
+    <TextView
+        style="@style/WhiteBoldText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:text="@string/points"
+        />
+
+</LinearLayout>
+

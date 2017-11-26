@@ -1,12 +1,15 @@
 package com.mobile.ziku.sport.activities
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import android.view.MenuItem
+import com.mobile.ziku.sport.BaseActivity
 import com.mobile.ziku.sport.R
 import com.mobile.ziku.sport.constractors.LatestContractor
+import com.mobile.ziku.sport.models.MatchResult
+import timber.log.Timber
 import javax.inject.Inject
 
-class LatestActivity : AppCompatActivity(), LatestContractor.View {
+class LatestActivity : BaseActivity(), LatestContractor.View {
 
     @Inject lateinit var presenter : LatestContractor.Presenter
 
@@ -25,4 +28,10 @@ class LatestActivity : AppCompatActivity(), LatestContractor.View {
         presenter.removeView()
     }
 
+    override fun updateRecyclerView(scores: List<MatchResult>) {
+    }
+
+    override fun displayMessage(it: Throwable?) {
+        super.displayMessage(it)
+    }
 }

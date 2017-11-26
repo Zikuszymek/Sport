@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">Sport</string>
+
     <string name="title_activity_standings">Standings</string>
+    <string name="title_activity_news">News</string>
+    <string name="title_activity_scores">Scores</string>
+
+    <string name="donwload_data_error">Problem podczas pobierania danych</string>
+
+    <string name="club">Club</string>
+    <string name="matches">P</string>
+    <string name="wins">W</string>
+    <string name="draw">D</string>
+    <string name="lost">L</string>
+    <string name="goals">GD</string>
+    <string name="points">Pts</string>
 </resources>

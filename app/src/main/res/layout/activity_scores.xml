@@ -6,4 +6,32 @@
     android:layout_height="match_parent"
     tools:context="com.mobile.ziku.sport.activities.ScoresActivity">
 
+    <TextView
+        android:id="@+id/date_text_view"
+        style="@style/ScoresHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Data" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swpie_refresh_standings"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_text_view">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/scores_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <include layout="@layout/navigation_view" />
+
 </android.support.constraint.ConstraintLayout>

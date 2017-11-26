@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="matchResult"
+            type="com.mobile.ziku.sport.models.MatchResult"/>
+    </data>
+
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        style="@style/BuleBoldText"
+        android:id="@+id/left_team_text_view"
+        android:layout_width="0dp"
+        android:layout_weight="3"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:layout_gravity="start"
+        android:paddingLeft="@dimen/base_padding"
+        android:paddingStart="@dimen/base_padding"
+        android:text="@{matchResult.teamA}"
+        tools:text="Chelsa" />
+
+    <TextView
+        style="@style/WhiteBoldText"
+        android:id="@+id/scores_text_view"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:background="@drawable/grey_rectangle"
+        android:text="@{matchResult.result}"
+        android:textAlignment="center"
+        tools:text="2-2" />
+
+    <TextView
+        style="@style/BuleBoldText"
+        android:id="@+id/right_team_text_view"
+        android:layout_weight="3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:layout_gravity="end"
+        android:paddingRight="@dimen/base_padding"
+        android:paddingEnd="@dimen/base_padding"
+        android:text="@{matchResult.teamB}"
+        tools:text="Manchester" />
+
+</LinearLayout>
+
+</layout>

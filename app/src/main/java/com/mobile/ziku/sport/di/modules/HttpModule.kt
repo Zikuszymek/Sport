@@ -10,6 +10,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
+import retrofit2.converter.simplexml.SimpleXmlConverterFactory
 import java.util.concurrent.TimeUnit
 import javax.inject.Named
 import javax.inject.Singleton
@@ -27,6 +28,7 @@ class HttpModule {
         return Retrofit.Builder()
                 .baseUrl(retrofitUrl)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(SimpleXmlConverterFactory.create() )
                 .client(okHttpClient)
                 .build()
     }
@@ -54,6 +56,6 @@ class HttpModule {
 
     @Provides
     @Named(RETROFIT_URL)
-    fun provideRetrofitUrl():String = "http://www.mobilefeeds.performgroup.com/utilities/interviews/techtest/"
+    fun provideRetrofitUrl():String = "http://www.mobilefeeds.performgroup.com/"
 
 }

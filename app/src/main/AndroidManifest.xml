@@ -2,15 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mobile.ziku.sport">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
+        android:name=".SportApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:name=".SportApplication">
-        <activity android:name=".activities.LatestActivity">
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.LatestActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:label="@string/title_activity_news">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,8 +23,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.StandingsActivity"/>
-        <activity android:name=".activities.ScoresActivity" />
+            android:name=".activities.StandingsActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:label="@string/title_activity_standings" />
+        <activity
+            android:name=".activities.ScoresActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"
+            android:label="@string/title_activity_scores" />
     </application>
 
 </manifest>

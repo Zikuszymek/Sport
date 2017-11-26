@@ -1,3 +1,5 @@
 package com.mobile.ziku.sport
 
-interface BaseView
+interface BaseView{
+    fun displayMessage(it: Throwable?)
+}
