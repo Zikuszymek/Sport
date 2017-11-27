@@ -6,12 +6,11 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.mobile.ziku.sport.R
-import com.mobile.ziku.sport.models.Match
 import com.mobile.ziku.sport.models.MatchResult
-import com.mobile.ziku.sport.viewholders.BackgroundView
+import com.mobile.ziku.sport.enums.BackgroundView
 import com.mobile.ziku.sport.viewholders.ScoresViewHolder
 
-class ScoresRecyclerAdapter : RecyclerView.Adapter<ScoresViewHolder>() {
+class ScoresRecyclerAdapter : BaseRecycleAdapter<ScoresViewHolder>() {
 
     var scoresList = mutableListOf<MatchResult>()
 
@@ -27,11 +26,4 @@ class ScoresRecyclerAdapter : RecyclerView.Adapter<ScoresViewHolder>() {
 
     override fun getItemCount(): Int = scoresList.size
 
-    private fun getBackgroundView(position : Int) : BackgroundView{
-        return when(position % 2){
-            0 -> BackgroundView.WHITE
-            1 -> BackgroundView.GREY
-            else -> BackgroundView.WHITE
-        }
-    }
 }

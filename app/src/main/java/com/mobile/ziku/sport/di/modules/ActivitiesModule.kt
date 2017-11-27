@@ -1,6 +1,7 @@
 package com.mobile.ziku.sport.di.modules
 
 import com.mobile.ziku.sport.activities.LatestActivity
+import com.mobile.ziku.sport.activities.NewsWebViewActivity
 import com.mobile.ziku.sport.activities.ScoresActivity
 import com.mobile.ziku.sport.activities.StandingsActivity
 import com.mobile.ziku.sport.di.modules.activities.LatestActivityModule
@@ -24,4 +25,8 @@ abstract class ActivitiesModule {
     @ActivityScope
     @ContributesAndroidInjector(modules = arrayOf(StandingsActivityModule::class))
     abstract fun provideStandingsActivity(): StandingsActivity
+
+    @ActivityScope
+    @ContributesAndroidInjector()
+    abstract fun provideNewsWebViewActivity(): NewsWebViewActivity
 }

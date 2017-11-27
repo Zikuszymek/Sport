@@ -13,7 +13,6 @@ import javax.inject.Inject
 class StandingsActivity : BaseActivity(), StandingsContractor.View {
 
     @Inject lateinit var presenter: StandingsContractor.Presenter
-    @Inject lateinit var layoutManager: LinearLayoutManager
 
     val standingsAdapter: StandingsRecycleAdapter by lazy { StandingsRecycleAdapter() }
 
@@ -58,9 +57,9 @@ class StandingsActivity : BaseActivity(), StandingsContractor.View {
         swpie_refresh_standings.isRefreshing = false
     }
 
-    override fun updateRecyclerView(scores: List<Ranking>) {
+    override fun updateRecyclerView(standings: List<Ranking>) {
         swipeRefreshCancel()
-        standingsAdapter.scoresList = scores
+        standingsAdapter.scoresList = standings
         standingsAdapter.notifyDataSetChanged()
     }
 

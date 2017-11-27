@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="news"
+            type="com.mobile.ziku.sport.models.Item"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:padding="@dimen/base_padding">
+
+        <ImageView
+            android:id="@+id/news_image"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/descripyion_text"
+            app:srcCompat="@{news.enclosure.url}"
+            tools:src="@drawable/ic_launcher_background"/>
+
+        <TextView
+            style="@style/WhiteText"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_marginStart="@dimen/base_margin"
+            android:id="@+id/header_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/news_image"
+            android:layout_toEndOf="@+id/news_image"
+            android:textStyle="bold"
+            android:text="@{news.title}"
+            tools:text="Header text"/>
+
+        <TextView
+            style="@style/SmallRedText"
+            android:id="@+id/pub_date_text"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_marginStart="@dimen/base_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/header_text"
+            android:layout_toRightOf="@+id/news_image"
+            android:layout_toEndOf="@+id/news_image"
+            android:text="@{news.pubDate}"
+            tools:text="Date"/>
+
+        <TextView
+            style="@style/WhiteText"
+            android:id="@+id/descripyion_text"
+            android:layout_marginLeft="@dimen/base_margin"
+            android:layout_below="@+id/pub_date_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/news_image"
+            android:layout_toEndOf="@+id/news_image"
+            android:text="@{news.description}"
+            tools:text="Description"/>
+    </RelativeLayout>
+</layout>

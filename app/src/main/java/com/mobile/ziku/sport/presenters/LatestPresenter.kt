@@ -1,7 +1,9 @@
 package com.mobile.ziku.sport.presenters
 
 import com.mobile.ziku.sport.constractors.LatestContractor
+import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 class LatestPresenter @Inject constructor(
@@ -20,6 +22,16 @@ class LatestPresenter @Inject constructor(
     }
 
     override fun getCurrentData() {
+        compositeDisposable.add(
+                dataManager.downloadLastNews()
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe({
+                            view?.updateRecyclerView(it)
+                        },{
+                            view?.displayMessage(it)
+                        })
+        )
     }
 
 }

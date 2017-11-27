@@ -4,6 +4,7 @@ import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView
 import com.mobile.ziku.sport.BR
 import com.mobile.ziku.sport.R
+import com.mobile.ziku.sport.enums.BackgroundView
 import com.mobile.ziku.sport.models.MatchResult
 import kotlinx.android.synthetic.main.score_view_holder.view.*
 

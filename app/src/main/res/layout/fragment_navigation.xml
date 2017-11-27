@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/blueMenu">
+    android:background="@color/blueMenu"
+    android:orientation="vertical">
 
     <TextView
-        style="@style/MenuTextView"
         android:id="@+id/textViewNew"
+        style="@style/MenuTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/title_activity_news"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:text="News" />
 
+    <include layout="@layout/separator" />
+
     <TextView
-        style="@style/MenuTextView"
         android:id="@+id/textViewScores"
+        style="@style/MenuTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/title_activity_scores"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNew"
         tools:text="Scores" />
+
+    <include layout="@layout/separator" />
 
     <TextView
         android:id="@+id/textViewStandings"
@@ -34,10 +33,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/title_activity_standings"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewScores"
         tools:text="Standings" />
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

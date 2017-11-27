@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/navigation"
-        android:icon="@drawable/ic_search_black_24dp"
-        android:title="Menu"
+        android:icon="@drawable/ic_arrow_down"
+        android:title="@string/menu"
         app:showAsAction="ifRoom"/>
 </menu>

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mobile.ziku.sport">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".SportApplication"
@@ -13,9 +13,9 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activities.LatestActivity"
-            android:screenOrientation="portrait"
+            android:label="@string/title_activity_news"
             android:launchMode="singleTask"
-            android:label="@string/title_activity_news">
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,14 +24,15 @@
         </activity>
         <activity
             android:name=".activities.StandingsActivity"
-            android:screenOrientation="portrait"
+            android:label="@string/title_activity_standings"
             android:launchMode="singleTask"
-            android:label="@string/title_activity_standings" />
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activities.ScoresActivity"
-            android:screenOrientation="portrait"
+            android:label="@string/title_activity_scores"
             android:launchMode="singleTask"
-            android:label="@string/title_activity_scores" />
+            android:screenOrientation="portrait" />
+        <activity android:name=".activities.NewsWebViewActivity"></activity>
     </application>
 
 </manifest>

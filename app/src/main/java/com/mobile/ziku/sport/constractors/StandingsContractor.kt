@@ -8,7 +8,7 @@ import io.reactivex.Single
 interface StandingsContractor {
 
     interface View : BaseView {
-        fun updateRecyclerView(scores: List<Ranking>)
+        fun updateRecyclerView(standings: List<Ranking>)
     }
 
     interface Presenter : BasePresenter<View> {

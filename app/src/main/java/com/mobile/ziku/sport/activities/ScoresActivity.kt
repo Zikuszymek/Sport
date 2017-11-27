@@ -13,7 +13,6 @@ import javax.inject.Inject
 class ScoresActivity : BaseActivity(), ScoresContractor.View {
 
     @Inject lateinit var presenter: ScoresContractor.Presenter
-    @Inject lateinit var layoutManager: LinearLayoutManager
 
     val scoresAdapter: ScoresRecyclerAdapter by lazy { ScoresRecyclerAdapter() }
 

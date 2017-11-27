@@ -1,4 +1,4 @@
-package com.mobile.ziku.sport.viewholders
+package com.mobile.ziku.sport.enums
 
 enum class BackgroundView {
     WHITE,

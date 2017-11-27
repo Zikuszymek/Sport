@@ -9,7 +9,7 @@ import com.mobile.ziku.sport.R
 import com.mobile.ziku.sport.models.Ranking
 import com.mobile.ziku.sport.viewholders.StandingsViewHolder
 
-class StandingsRecycleAdapter : RecyclerView.Adapter<StandingsViewHolder>() {
+class StandingsRecycleAdapter : BaseRecycleAdapter<StandingsViewHolder>() {
 
     var scoresList = listOf<Ranking>()
 
@@ -20,7 +20,7 @@ class StandingsRecycleAdapter : RecyclerView.Adapter<StandingsViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: StandingsViewHolder?, position: Int) {
-        holder?.bindData(scoresList[position])
+        holder?.bindData(scoresList[position], getBackgroundView(position))
     }
 
     override fun getItemCount(): Int = scoresList.size

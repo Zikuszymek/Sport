@@ -2,13 +2,13 @@ package com.mobile.ziku.sport.constractors
 
 import com.mobile.ziku.sport.BasePresenter
 import com.mobile.ziku.sport.BaseView
-import com.mobile.ziku.sport.models.MatchResult
+import com.mobile.ziku.sport.models.Item
 import io.reactivex.Single
 
 interface LatestContractor {
 
     interface View:BaseView{
-        fun updateRecyclerView(scores: List<MatchResult>)
+        fun updateRecyclerView(news: List<Item>)
     }
 
     interface Presenter:BasePresenter<View>{
@@ -16,6 +16,6 @@ interface LatestContractor {
     }
 
     interface DataManager{
-        fun downloadCurrentScores() : Single<List<MatchResult>>
+        fun downloadLastNews() : Single<List<Item>>
     }
 }

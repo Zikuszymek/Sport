@@ -11,6 +11,6 @@ class StandingsDataManager @Inject constructor(
 ) : StandingsContractor.DataManager {
 
     override fun downloadCurrentStandings(): Single<List<Ranking>> {
-        return retrofitService.getStandings().map { it.competition?.season?.round?.resultsTable?.rankings ?: emptyList<Ranking>()}
+        return retrofitService.getStandings().map { it.competition?.season?.round?.resultsTable?.rankings?.sortedBy { it.rank } ?: emptyList<Ranking>() }
     }
 }
