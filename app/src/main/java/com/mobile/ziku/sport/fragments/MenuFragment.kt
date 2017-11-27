@@ -1,7 +1,5 @@
 package com.mobile.ziku.sport.fragments
 
-import android.content.ComponentName
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment

@@ -1,7 +1,6 @@
 package com.mobile.ziku.sport.activities
 
 import android.os.Bundle
-import android.view.Menu
 import android.view.MenuItem
 import com.mobile.ziku.sport.R
 import dagger.android.support.DaggerAppCompatActivity

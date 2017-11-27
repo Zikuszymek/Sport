@@ -1,7 +1,6 @@
 package com.mobile.ziku.sport.activities
 
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
 import com.mobile.ziku.sport.BaseActivity
 import com.mobile.ziku.sport.R
 import com.mobile.ziku.sport.adapters.StandingsRecycleAdapter

@@ -2,12 +2,10 @@ package com.mobile.ziku.sport.adapters
 
 import android.databinding.DataBindingUtil
 import android.databinding.ViewDataBinding
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.mobile.ziku.sport.R
 import com.mobile.ziku.sport.models.MatchResult
-import com.mobile.ziku.sport.enums.BackgroundView
 import com.mobile.ziku.sport.viewholders.ScoresViewHolder
 
 class ScoresRecyclerAdapter : BaseRecycleAdapter<ScoresViewHolder>() {
