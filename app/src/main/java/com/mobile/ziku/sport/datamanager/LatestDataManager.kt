@@ -10,7 +10,6 @@ class LatestDataManager @Inject constructor(
         val retrofitService: RetrofitService.SportService
 ): LatestContractor.DataManager{
 
-
     override fun downloadLastNews(): Single<List<Item>> {
         return retrofitService.getLatestNews()
                 .map { it.channel?.items?.toList() ?: emptyList()}

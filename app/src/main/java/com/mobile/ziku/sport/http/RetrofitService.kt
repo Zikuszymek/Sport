@@ -16,5 +16,4 @@ class RetrofitService {
 
         @GET("utilities/interviews/techtest/standings.xml")
         fun getStandings() : Single<BaseResponse>
-    }
-}
+    }}
