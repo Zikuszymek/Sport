@@ -8,7 +8,7 @@ import io.reactivex.Single
 interface ScoresContractor {
 
     interface View: BaseView{
-        fun updateView(scores: ScoresViewUpdate)
+        fun updateView(updateView: ScoresViewUpdate)
     }
 
     interface Presenter: BasePresenter<View> {

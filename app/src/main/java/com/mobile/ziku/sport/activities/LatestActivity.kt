@@ -25,6 +25,7 @@ class LatestActivity : BaseActivity(), LatestContractor.View {
         initRecyclerView()
         initOnSwpieRefresh()
         presenter.getCurrentData()
+        supportActionBar?.title = getString(R.string.title_activity_news)
     }
 
     override fun onResume() {

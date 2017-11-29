@@ -55,10 +55,7 @@ class ScoresActivity : BaseActivity(), ScoresContractor.View {
     override fun updateView(updateView: ScoresViewUpdate) {
         swipeRefreshCancel()
         updateHeaderText(updateView.header)
-        scoresAdapter.apply {
-            scoresList = updateView.scores.toMutableList()
-            notifyDataSetChanged()
-        }
+        scoresAdapter.updateList(updateView.scores)
     }
 
     private fun updateHeaderText(headerText: String) {

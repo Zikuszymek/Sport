@@ -58,8 +58,7 @@ class StandingsActivity : BaseActivity(), StandingsContractor.View {
 
     override fun updateRecyclerView(standings: List<Ranking>) {
         swipeRefreshCancel()
-        standingsAdapter.scoresList = standings
-        standingsAdapter.notifyDataSetChanged()
+        standingsAdapter.updateList(standings)
     }
 
     override fun displayMessage(it: Throwable?) {
